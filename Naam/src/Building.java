@@ -4,18 +4,18 @@ import java.util.List;
 
 public class Building {
     public String name;
-    public int building_ID;
     public int HP;
     public int dps;
     public int range;
     public List<Item> cost;
-    public Building(String name, int building_ID, int HP, int dps, int range, List<Item> cost) {
+    public int level;
+    public Building(String name, int HP, int dps, int range, List<Item> cost, int level) {
         setName(name);
-        setBuilding_ID(building_ID);
         setHP(HP);
         setDps(dps);
         setRange(range);
         setCost(cost);
+        setLevel(level);
     }
 
     public void addCostItem(Item item) {
@@ -36,14 +36,6 @@ public class Building {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getBuilding_ID() {
-        return building_ID;
-    }
-
-    public void setBuilding_ID(int building_ID) {
-        this.building_ID = building_ID;
     }
 
     public int getHP() {
@@ -70,4 +62,11 @@ public class Building {
         this.range = range;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 }

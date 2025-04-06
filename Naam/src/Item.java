@@ -1,6 +1,7 @@
 public class Item {
     public String name;
     public int ammount;
+    public int cost;
     //getter setter
     public String getName() {
         return name;

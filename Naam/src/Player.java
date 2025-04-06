@@ -7,13 +7,15 @@ public class Player {
     public int HP;
     public List<Item> list;
     public int range;
-    public Player(String name, int pos_x, int pos_y, int HP, List<Item> items, int range) {
+    public int level;
+    public Player(String name, int pos_x, int pos_y, int HP, List<Item> items, int range, int level) {
         setPos_x(pos_x);
         setPos_y(pos_y);
         setName(name);
         setHP(HP);
         setList(items);
         setRange(range);
+        setLevel(level);
     }
 
     public String getName() {return name;
@@ -71,5 +73,13 @@ public class Player {
 
     public void setRange(int range) {
         this.range = range;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }
