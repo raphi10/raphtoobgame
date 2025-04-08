@@ -9,6 +9,8 @@ public class Building {
     public int range;
     public List<Item> cost;
     public int level;
+
+    //constructor
     public Building(String name, int HP, int dps, int range, List<Item> cost, int level) {
         setName(name);
         setHP(HP);
@@ -18,6 +20,7 @@ public class Building {
         setLevel(level);
     }
 
+    //getter setter
     public void addCostItem(Item item) {
         cost.add(item);
     }
