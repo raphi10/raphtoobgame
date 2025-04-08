@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package Model;
+
 import java.util.List;
 
 public class Enemy {

@@ -1,3 +1,6 @@
+package Model;
+
+import java.awt.*;
 import java.util.List;
 
 public class Player {
@@ -5,20 +8,31 @@ public class Player {
     public int pos_x;
     public int pos_y;
     public int HP;
-    public List<Item> list;
+    public List<Item> inventory;
     public int range;
     public int level;
-    public Player(String name, int pos_x, int pos_y, int HP, List<Item> items, int range, int level) {
+    public Image sprite;
+    public Player(String name, int pos_x, int pos_y, int HP, List<Item> items, int range, int level, Image sprite) {
         setPos_x(pos_x);
         setPos_y(pos_y);
         setName(name);
         setHP(HP);
-        setList(items);
+        setInventory(items);
         setRange(range);
         setLevel(level);
     }
 
-    public String getName() {return name;
+
+    public Image getSprite() {
+        return sprite;
+    }
+
+    public void setSprite(Image sprite) {
+        this.sprite = sprite;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
@@ -49,22 +63,17 @@ public class Player {
         this.HP = HP;
     }
 
-    public List<Item> getList() {
-        return list;
+    public List<Item> getInventory() {
+        return inventory;
     }
 
-    public void setList(List<Item> list) {
-        if( list.size() <= 7) {
-            this.list = list;
+    public void setInventory(List<Item> inventory) {
+        if( inventory.size() <= 7) {
+            this.inventory = inventory;
         }
         else {
             throw new RuntimeException("Items size exceeds 7");
         }
-    }
-    public void addItem(Item item) {
-        if( list.size()<=7) {
-            this.list.add(item);
-        };
     }
 
     public int getRange() {
@@ -82,4 +91,13 @@ public class Player {
     public void setLevel(int level) {
         this.level = level;
     }
+
+
+    public void addItem(Item item) {
+        if( inventory.size()<=7) {
+            this.inventory.add(item);
+        };
+    }
+
+
 }

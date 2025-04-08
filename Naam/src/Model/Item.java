@@ -1,9 +1,8 @@
-import java.util.List;
+package Model;
 
 public class Item {
     public String name;
     public int ammount;
-    public List<Item> cost;
     public int level;
     //getter setter
     public String getName() {
@@ -13,18 +12,15 @@ public class Item {
         this.name = name;
     }
 
-    public int getAmmount() {return ammount;}
-    public void setAmmount(int ammount) {if (ammount <= 64) {this.ammount = ammount;}}
-
-    public int getCost() {
-        return cost;
+    public int getAmmount() {
+        return ammount;
     }
-
-    public void setCost(int cost) {
-        this.cost = cost;
+    public void setAmmount(int ammount) {
+        if (ammount <= 64) {this.ammount = ammount;}
     }
 
     public int getLevel() {
+
         return level;
     }
 
@@ -36,7 +32,6 @@ public class Item {
     public Item(String name,int ammount) {
         setName(name);
         setAmmount(ammount);
-        setCost(cost);
         setLevel(level);
 
     }
